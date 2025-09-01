@@ -68,4 +68,13 @@
 	  <Folder Include="Telas\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="TelaAno.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TelaDia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
