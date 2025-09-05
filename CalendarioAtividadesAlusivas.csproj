@@ -59,13 +59,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Telas\**" />
+	  <Compile Remove="Telas\**" />
+	  <EmbeddedResource Remove="Telas\**" />
+	  <MauiCss Remove="Telas\**" />
+	  <MauiXaml Remove="Telas\**" />
+	  <None Remove="Telas\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.5" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Resources\Images\" />
-	  <Folder Include="Telas\" />
 	</ItemGroup>
 
 	<ItemGroup>

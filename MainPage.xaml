@@ -10,18 +10,18 @@
             <Style TargetType="Border" x:Key="DiasFrame">
                 <Setter Property="BackgroundColor" Value="Red"/>
                 <Setter Property="Opacity" Value="0.3"/>
-                <Setter Property="WidthRequest" Value="150"/>
-                <Setter Property="HeightRequest" Value="150"/>
+                
+                <Setter Property="Stroke" Value="Black"/>
+                <Setter Property="StrokeThickness" Value="2"/>
             </Style>
             <Style TargetType="Grid" x:Key="Dias">
-                <Setter Property="WidthRequest" Value="150"/>
-                <Setter Property="HeightRequest" Value="150"/>
+                
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <VerticalStackLayout>
-        <Grid RowDefinitions="50,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*" BackgroundColor="Blue" HeightRequest="1000" WidthRequest="1100" Margin="0,0,0,0">
+    <VerticalStackLayout VerticalOptions="FillAndExpand">
+        <Grid RowDefinitions="50,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*" BackgroundColor="Blue" WidthRequest="1100" VerticalOptions="FillAndExpand">
             <Label Text="xxxxxxxxxx" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" FontSize="Large"/>
             <Grid Grid.Column="0" Grid.Row="1" Style="{StaticResource Dias}">
                 <Border Style="{StaticResource DiasFrame}"/>
