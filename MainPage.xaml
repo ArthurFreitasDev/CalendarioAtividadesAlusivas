@@ -20,8 +20,8 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <VerticalStackLayout VerticalOptions="FillAndExpand">
-        <Grid RowDefinitions="50,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*" BackgroundColor="Blue" WidthRequest="1100" VerticalOptions="FillAndExpand">
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Grid RowDefinitions="50,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*" BackgroundColor="Blue" VerticalOptions="FillAndExpand" Margin="30,0,30,0">
             <Label Text="xxxxxxxxxx" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" FontSize="Large"/>
             <Grid Grid.Column="0" Grid.Row="1" Style="{StaticResource Dias}">
                 <Border Style="{StaticResource DiasFrame}"/>
@@ -165,7 +165,7 @@
                 <Label Text="aa"/>
             </Grid>
         </Grid>
-    </VerticalStackLayout>
+    </StackLayout>
 
 
 
