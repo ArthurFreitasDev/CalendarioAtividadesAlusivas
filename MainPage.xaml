@@ -5,17 +5,44 @@
              Shell.NavBarIsVisible="False">
 
 
-    <ContentPage.Resources>
+    <StackLayout HorizontalOptions="FillAndExpand">
+        <Grid RowDefinitions="50,50,*" ColumnDefinitions="*,*,*,*,*,*,*">
+            <Label Text="Calendario Atividades Alusivas" Grid.Column="0" Grid.Row="0"/>
+            <Label Text="Sabado" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Segunda" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="Terça" Grid.Row="1" Grid.Column="2"/>
+            <Label Text="Quarta" Grid.Row="1" Grid.Column="3"/>
+            <Label Text="Quinta" Grid.Row="1" Grid.Column="4"/>
+            <Label Text="Sexta" Grid.Row="1" Grid.Column="5"/>
+            <Label Text="Sabado" Grid.Row="1" Grid.Column="6"/>
+        </Grid>
+    </StackLayout>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Border" x:Key="DiasFrame">
                 <Setter Property="BackgroundColor" Value="Red"/>
                 <Setter Property="Opacity" Value="0.3"/>
-                
+                <Setter Property="Margin" Value="0"/>
                 <Setter Property="Stroke" Value="Black"/>
                 <Setter Property="StrokeThickness" Value="2"/>
             </Style>
             <Style TargetType="Grid" x:Key="Dias">
-                
+                <Setter Property="Margin" Value="0"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -165,8 +192,5 @@
                 <Label Text="aa"/>
             </Grid>
         </Grid>
-    </StackLayout>
-
-
-
+    </StackLayout>-->
 </ContentPage>
