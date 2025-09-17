@@ -5,10 +5,18 @@
              Shell.NavBarIsVisible="False">
 
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Border" x:Key="NomeDia">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <StackLayout HorizontalOptions="FillAndExpand">
         <Grid RowDefinitions="50,50,*" ColumnDefinitions="*,*,*,*,*,*,*">
-            <Label Text="Calendario Atividades Alusivas" Grid.Column="0" Grid.Row="0"/>
-            <Label Text="Sabado" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Calendario Atividades Alusivas" Grid.ColumnSpan="7" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0"/>
+            <Label Text="Sabado" Grid.Row="1" Grid.Column="0" Style="{StaticResource NomeDia}"/>
             <Label Text="Segunda" Grid.Row="1" Grid.Column="1"/>
             <Label Text="Terça" Grid.Row="1" Grid.Column="2"/>
             <Label Text="Quarta" Grid.Row="1" Grid.Column="3"/>
