@@ -1,25 +1,32 @@
-﻿namespace CalendarioAtividadesAlusivas
+﻿using CalendarioAtividadesAlusivas.Helpers;
+using CalendarioAtividadesAlusivas.Classes;
+using CalendarioAtividadesAlusivas;
+namespace CalendarioAtividadesAlusivas
 {
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
+
+            MainPage = new AppShell();
         }
 
-        protected override Window CreateWindow(IActivationState? activationState)
+        static HelperDias _dbDias;
+        public static HelperDias DBDias
         {
-            return new Window(new AppShell());
-
-            var window = base.CreateWindow(activationState);
-
-            const int newWidth = 1920;
-            const int newHeight = 1080;
-
-            window.Width = newWidth;
-            window.Height = newHeight;
-
-            return window;
+            get
+            {
+                if(_dbDias == null)
+                {
+                    string path = Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Dias.db3");
+                    _dbDias = new HelperDias(path);
+                }
+                return _dbDias;
+            }
         }
+
+        public static ControleMes Controle_Mes = new ControleMes();
     }
 }
