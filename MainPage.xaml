@@ -13,17 +13,47 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <StackLayout HorizontalOptions="FillAndExpand">
-        <Grid RowDefinitions="50,50,*" ColumnDefinitions="*,*,*,*,*,*,*">
+    <StackLayout>
+        <Grid RowDefinitions="50,50,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*">
             <Label Text="Calendario Atividades Alusivas" Grid.ColumnSpan="7" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0"/>
             <Label Text="Sabado" Grid.Row="1" Grid.Column="0" Style="{StaticResource NomeDia}"/>
-            <Label Text="Segunda" Grid.Row="1" Grid.Column="1"/>
-            <Label Text="Terça" Grid.Row="1" Grid.Column="2"/>
-            <Label Text="Quarta" Grid.Row="1" Grid.Column="3"/>
-            <Label Text="Quinta" Grid.Row="1" Grid.Column="4"/>
-            <Label Text="Sexta" Grid.Row="1" Grid.Column="5"/>
-            <Label Text="Sabado" Grid.Row="1" Grid.Column="6"/>
+            <Label Text="Segunda" Grid.Row="1" Grid.Column="1" Style="{StaticResource NomeDia}"/>
+            <Label Text="Terça" Grid.Row="1" Grid.Column="2" Style="{StaticResource NomeDia}"/>
+            <Label Text="Quarta" Grid.Row="1" Grid.Column="3" Style="{StaticResource NomeDia}"/>
+            <Label Text="Quinta" Grid.Row="1" Grid.Column="4" Style="{StaticResource NomeDia}"/>
+            <Label Text="Sexta" Grid.Row="1" Grid.Column="5" Style="{StaticResource NomeDia}"/>
+            <Label Text="Sabado" Grid.Row="1" Grid.Column="6" Style="{StaticResource NomeDia}"/>
+
+            <CollectionView Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="2" x:Name="lst_dias_MainPage" ItemsLayout="HorizontalList"
+                            BackgroundColor="Red">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border WidthRequest="200" HeightRequest="200">
+                            <Grid RowDefinitions="50, *" ColumnDefinitions="*">
+                                <Label Text="{Binding Dia}" Grid.Row="0" Grid.Column="0"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <!--<ListView x:Name="lst_dias_MainPage" 
+                      ItemSelected="lst_dias_MainPage_ItemSelected"
+                      Grid.Column="0"  Grid.Row="2">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Border>
+                                <Grid RowDefinitions="50, *" ColumnDefinitions="*">
+                                    <Label Text="{Binding Dia}" Grid.Row="0" Grid.Column="0"/>
+                                </Grid>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
         </Grid>
+        
     </StackLayout>
     
     

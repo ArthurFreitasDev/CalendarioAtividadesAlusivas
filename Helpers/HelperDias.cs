@@ -39,6 +39,11 @@ namespace CalendarioAtividadesAlusivas.Helpers
                 return false;
             }
         }
+
+        public async void DeleteItens()
+        {
+            await _conn.DropTableAsync<Dias>();
+        }
     }
     
 }
