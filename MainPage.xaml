@@ -16,7 +16,7 @@
     <StackLayout>
         <Grid RowDefinitions="50,50,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*">
             <Label Text="Calendario Atividades Alusivas" Grid.ColumnSpan="7" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0"/>
-            <Label Text="Sabado" Grid.Row="1" Grid.Column="0" Style="{StaticResource NomeDia}"/>
+            <Label Text="Domingo" Grid.Row="1" Grid.Column="0" Style="{StaticResource NomeDia}"/>
             <Label Text="Segunda" Grid.Row="1" Grid.Column="1" Style="{StaticResource NomeDia}"/>
             <Label Text="Terça" Grid.Row="1" Grid.Column="2" Style="{StaticResource NomeDia}"/>
             <Label Text="Quarta" Grid.Row="1" Grid.Column="3" Style="{StaticResource NomeDia}"/>

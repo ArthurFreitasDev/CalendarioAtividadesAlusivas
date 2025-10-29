@@ -12,5 +12,6 @@ namespace CalendarioAtividadesAlusivas.Models
         public string Dia_Semana { get; set; }
         public string DataEspecial { get; set; }
         public int LinhaCalendario { get; set; }
+        public string Mes { get; set; } 
     }
 }

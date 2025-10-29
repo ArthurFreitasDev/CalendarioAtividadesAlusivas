@@ -11,6 +11,7 @@ namespace CalendarioAtividadesAlusivas
 {
     public partial class MainPage : ContentPage
     {
+        bool Segunda = false, Terca = false, Quarta = false, Quinta = false, Sexta = false, Sabado = false, Domingo = false;
         ObservableCollection<Dias> lista_dias = new ObservableCollection<Dias>();
         public MainPage()
         {
@@ -30,7 +31,76 @@ namespace CalendarioAtividadesAlusivas
                 {
                     if(i.LinhaCalendario == 1)
                     {
-                        lista_dias.Add(i);
+                        if(i.Dia_Semana == "Sábado" || !Sabado)
+                        {
+                            lista_dias.Add(i);
+                            Sabado = true;
+                        }
+                        else
+                        {
+                            lista_dias.Add(new Dias { DataEspecial = "", Dia = 0, Dia_Semana = "", LinhaCalendario = 0, Mes = ""});
+                            Sabado = true;
+                        }
+                        if (i.Dia_Semana == "Sexta-Feira" || !Sexta)
+                        {
+                            lista_dias.Add(i);
+                            Sexta = true;
+                        }
+                        else
+                        {
+                            lista_dias.Add(new Dias { DataEspecial = "", Dia = 0, Dia_Semana = "", LinhaCalendario = 0, Mes = "" });
+                            Sexta = true;
+                        }
+                        if (i.Dia_Semana == "Quinta-Feira" || !Quinta)
+                        {
+                            lista_dias.Add(i);
+                            Quinta = true;
+                        }
+                        else
+                        {
+                            lista_dias.Add(new Dias { DataEspecial = "", Dia = 0, Dia_Semana = "", LinhaCalendario = 0, Mes = "" });
+                            Quinta = true;
+                        }
+                        if (i.Dia_Semana == "Quarta-Feira" || !Quarta)
+                        {
+                            lista_dias.Add(i);
+                            Quarta = true;
+                        }
+                        else
+                        {
+                            lista_dias.Add(new Dias { DataEspecial = "", Dia = 0, Dia_Semana = "", LinhaCalendario = 0, Mes = "" });
+                            Quarta = true;
+                        }
+                        if (i.Dia_Semana == "Terça-Feira" || !Terca )
+                        {
+                            lista_dias.Add(i);
+                            Terca = true;
+                        }
+                        else
+                        {
+                            lista_dias.Add(new Dias { DataEspecial = "", Dia = 0, Dia_Semana = "", LinhaCalendario = 0, Mes = "" });
+                            Terca = true;
+                        }
+                        if (i.Dia_Semana == "Segunda-Feira" || !Segunda)
+                        {
+                            lista_dias.Add(i);
+                            Segunda = true;
+                        }
+                        else
+                        {
+                            lista_dias.Add(new Dias { DataEspecial = "", Dia = 0, Dia_Semana = "", LinhaCalendario = 0, Mes = "" });
+                            Segunda = true;
+                        }
+                        if (i.Dia_Semana == "Domingo" || !Domingo)
+                        {
+                            lista_dias.Add(i);
+                            Domingo = true;
+                        }
+                        else
+                        {
+                            lista_dias.Add(new Dias { DataEspecial = "", Dia = 0, Dia_Semana = "", LinhaCalendario = 0, Mes = "" });
+                            Domingo = true;
+                        }
                     }
                 }
             }
