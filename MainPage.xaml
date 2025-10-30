@@ -24,11 +24,11 @@
             <Label Text="Sexta" Grid.Row="1" Grid.Column="5" Style="{StaticResource NomeDia}"/>
             <Label Text="Sabado" Grid.Row="1" Grid.Column="6" Style="{StaticResource NomeDia}"/>
 
-            <CollectionView Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="2" x:Name="lst_dias_MainPage" ItemsLayout="HorizontalList"
-                            BackgroundColor="Red">
+            <CollectionView Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="2" x:Name="lst_dias_linha1_MainPage" ItemsLayout="HorizontalList"
+                            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Border WidthRequest="200" HeightRequest="200">
+                        <Border WidthRequest="220" HeightRequest="200">
                             <Grid RowDefinitions="50, *" ColumnDefinitions="*">
                                 <Label Text="{Binding Dia}" Grid.Row="0" Grid.Column="0"/>
                             </Grid>
