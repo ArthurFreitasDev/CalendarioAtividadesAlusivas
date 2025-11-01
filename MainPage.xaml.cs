@@ -11,14 +11,24 @@ namespace CalendarioAtividadesAlusivas
 {
     public partial class MainPage : ContentPage
     {
-        bool Segunda = false, Terca = false, Quarta = false, Quinta = false, Sexta = false, Sabado = false, Domingo = false;
+        int ContaLinha5 = 0, ContaLinha6 = 0;
         ObservableCollection<Dias> lista_dias_linha1 = new ObservableCollection<Dias>();
+        ObservableCollection<Dias> lista_dias_linha2 = new ObservableCollection<Dias>();
+        ObservableCollection<Dias> lista_dias_linha3 = new ObservableCollection<Dias>();
+        ObservableCollection<Dias> lista_dias_linha4 = new ObservableCollection<Dias>();
+        ObservableCollection<Dias> lista_dias_linha5 = new ObservableCollection<Dias>();
+        ObservableCollection<Dias> lista_dias_linha6 = new ObservableCollection<Dias>();
         public MainPage()
         {
             InitializeComponent();
             AdicionarDias();
             lst_dias_linha1_MainPage.ItemsSource = lista_dias_linha1;
-            
+            lst_dias_linha2_MainPage.ItemsSource = lista_dias_linha2;
+            lst_dias_linha3_MainPage.ItemsSource = lista_dias_linha3;
+            lst_dias_linha4_MainPage.ItemsSource = lista_dias_linha4;
+            lst_dias_linha5_MainPage.ItemsSource = lista_dias_linha5;
+            lst_dias_linha6_MainPage.ItemsSource = lista_dias_linha6;
+
         }
 
         protected async override void OnAppearing()
@@ -26,14 +36,74 @@ namespace CalendarioAtividadesAlusivas
             try
             {
                 lista_dias_linha1.Clear();
-                var AllDias = App.DBDias.GetAllDiasAsync().Result;
-                foreach(Dias i in AllDias)
+                var AllDiasLinha1 = App.DBDias.GetAllDiasAsync().Result;
+                foreach(Dias i in AllDiasLinha1)
                 {
                     if(i.LinhaCalendario == 1)
                     {
                         lista_dias_linha1.Add(i);
                     }
                 }
+                lista_dias_linha2.Clear();
+                var AllDiasLinha2 = App.DBDias.GetAllDiasAsync().Result;
+                foreach (Dias i in AllDiasLinha2)
+                {
+                    if (i.LinhaCalendario == 2)
+                    {
+                        lista_dias_linha2.Add(i);
+                    }
+                }
+                lista_dias_linha3.Clear();
+                var AllDiasLinha3 = App.DBDias.GetAllDiasAsync().Result;
+                foreach (Dias i in AllDiasLinha3)
+                {
+                    if (i.LinhaCalendario == 3)
+                    {
+                        lista_dias_linha3.Add(i);
+                    }
+                }
+                lista_dias_linha4.Clear();
+                var AllDiasLinha4 = App.DBDias.GetAllDiasAsync().Result;
+                foreach (Dias i in AllDiasLinha4)
+                {
+                    if (i.LinhaCalendario == 4)
+                    {
+                        lista_dias_linha4.Add(i);
+                    }
+                }
+                lista_dias_linha5.Clear();
+                var AllDiasLinha5 = App.DBDias.GetAllDiasAsync().Result;
+                foreach (Dias i in AllDiasLinha5)
+                {
+                    if (i.LinhaCalendario == 5)
+                    {
+                        lista_dias_linha5.Add(i);
+                        ContaLinha5 = ContaLinha5 + 1;
+                    }
+                }
+                if(ContaLinha5 < 7)
+                {
+                    lst_dias_linha5_MainPage.HorizontalOptions = LayoutOptions.StartAndExpand;
+                }
+                lista_dias_linha6.Clear();
+                var AllDiasLinha6 = App.DBDias.GetAllDiasAsync().Result;
+                foreach (Dias i in AllDiasLinha6)
+                {
+                    if (i.LinhaCalendario == 6)
+                    {
+                        lista_dias_linha6.Add(i);
+                        ContaLinha6 = ContaLinha6 + 1;
+                    }
+                    if(i.Dia == 31)
+                    {
+                        for (int j = ContaLinha6; j <= 7; j++)
+                        {
+                            lista_dias_linha6.Add(new Dias { DataEspecial = "", Dia_Semana = "", LinhaCalendario = 6, Mes = "" });
+                        }
+                    }
+                }
+
+                
 
 
                 //var AllDias = App.DBDias.GetAllDiasAsync().Result;

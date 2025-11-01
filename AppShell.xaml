@@ -7,9 +7,11 @@
     Title="CalendarioAtividadesAlusivas"
     Shell.FlyoutBehavior="Flyout">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="Mês">
+        <ShellContent Title="Mês" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Ano">
+        <ShellContent Title="Ano" ContentTemplate="{DataTemplate local:TelaAno}" Route="TelaAno"/>
+    </FlyoutItem>
 
 </Shell>
