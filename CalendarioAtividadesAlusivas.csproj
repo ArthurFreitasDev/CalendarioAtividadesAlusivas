@@ -59,15 +59,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AndroidResource Remove="Telas\**" />
-	  <Compile Remove="Telas\**" />
-	  <EmbeddedResource Remove="Telas\**" />
-	  <MauiCss Remove="Telas\**" />
-	  <MauiXaml Remove="Telas\**" />
-	  <None Remove="Telas\**" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.5" />
@@ -87,10 +78,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="TelaAno.xaml">
+	  <MauiXaml Update="Telas\TelaAno.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="TelaDia.xaml">
+	  <MauiXaml Update="Telas\TelaMes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

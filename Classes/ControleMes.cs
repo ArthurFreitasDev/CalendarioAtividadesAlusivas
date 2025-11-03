@@ -12,6 +12,9 @@ namespace CalendarioAtividadesAlusivas.Classes
         public async void TrocaTela_MesAtual(string mesAtual)
         {
             MesAtual = mesAtual;
+            Console.WriteLine("=======================================================================");
+            Console.WriteLine($"MesAtual set to: {MesAtual}");
+            Console.WriteLine("=====================================================================");
         }
 
         public string getTrocaTela_MesAtual()

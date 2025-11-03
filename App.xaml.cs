@@ -1,6 +1,7 @@
 ﻿using CalendarioAtividadesAlusivas.Helpers;
 using CalendarioAtividadesAlusivas.Classes;
 using CalendarioAtividadesAlusivas;
+using CalendarioAtividadesAlusivas.Telas;
 namespace CalendarioAtividadesAlusivas
 {
     public partial class App : Application
@@ -9,7 +10,7 @@ namespace CalendarioAtividadesAlusivas
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new MainPage();
         }
 
         static HelperDias _dbDias;

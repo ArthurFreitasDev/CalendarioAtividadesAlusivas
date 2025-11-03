@@ -1,15 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CalendarioAtividadesAlusivas.MainPage"
-             Shell.NavBarIsVisible="False">
-
-
+             x:Class="CalendarioAtividadesAlusivas.Telas.TelaMes"
+             Title="TelaMes">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Border" x:Key="NomeDia">
                 <Setter Property="HorizontalOptions" Value="Center"/>
-                
+
             </Style>
             <Style TargetType="Border" x:Name="Dias">
                 <Setter Property="WidthRequest" Value="244"/>
@@ -30,7 +28,7 @@
             <Label Text="Sabado" Grid.Row="1" Grid.Column="6" Style="{StaticResource NomeDia}"/>
 
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="2" x:Name="lst_dias_linha1_MainPage" ItemsLayout="HorizontalList"
-                            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+                        BackgroundColor="Red" HorizontalOptions="EndAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -42,7 +40,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="3" x:Name="lst_dias_linha2_MainPage" ItemsLayout="HorizontalList"
-                BackgroundColor="Red" HorizontalOptions="CenterAndExpand">
+            BackgroundColor="Red" HorizontalOptions="CenterAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -54,7 +52,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="4" x:Name="lst_dias_linha3_MainPage" ItemsLayout="HorizontalList"
-                BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -66,7 +64,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="5" x:Name="lst_dias_linha4_MainPage" ItemsLayout="HorizontalList"
-                BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -78,7 +76,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="6" x:Name="lst_dias_linha5_MainPage" ItemsLayout="HorizontalList"
-                BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -90,7 +88,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="7" x:Name="lst_dias_linha6_MainPage" ItemsLayout="HorizontalList"
-                BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -104,60 +102,60 @@
 
 
             <!--<ListView x:Name="lst_dias_MainPage" 
-                      ItemSelected="lst_dias_MainPage_ItemSelected"
-                      Grid.Column="0"  Grid.Row="2">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Border>
-                                <Grid RowDefinitions="50, *" ColumnDefinitions="*">
-                                    <Label Text="{Binding Dia}" Grid.Row="0" Grid.Column="0"/>
-                                </Grid>
-                            </Border>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>-->
+                  ItemSelected="lst_dias_MainPage_ItemSelected"
+                  Grid.Column="0"  Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Border>
+                            <Grid RowDefinitions="50, *" ColumnDefinitions="*">
+                                <Label Text="{Binding Dia}" Grid.Row="0" Grid.Column="0"/>
+                            </Grid>
+                        </Border>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
         </Grid>
-        
+
     </StackLayout>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!--<ContentPage.Resources>
-        <ResourceDictionary>
-            <Style TargetType="Border" x:Key="DiasFrame">
-                <Setter Property="BackgroundColor" Value="Red"/>
-                <Setter Property="Opacity" Value="0.3"/>
-                <Setter Property="Margin" Value="0"/>
-                <Setter Property="Stroke" Value="Black"/>
-                <Setter Property="StrokeThickness" Value="2"/>
-            </Style>
-            <Style TargetType="Grid" x:Key="Dias">
-                <Setter Property="Margin" Value="0"/>
-            </Style>
-        </ResourceDictionary>
+    <ResourceDictionary>
+        <Style TargetType="Border" x:Key="DiasFrame">
+            <Setter Property="BackgroundColor" Value="Red"/>
+            <Setter Property="Opacity" Value="0.3"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+        </Style>
+        <Style TargetType="Grid" x:Key="Dias">
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+    </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout VerticalOptions="FillAndExpand">
         <Grid RowDefinitions="50,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*,*,*" BackgroundColor="Blue" VerticalOptions="FillAndExpand" Margin="30,0,30,0">
             <Label Text="xxxxxxxxxx" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" FontSize="Large"/>
             <Grid Grid.Column="0" Grid.Row="1" Style="{StaticResource Dias}">
                 <Border Style="{StaticResource DiasFrame}"/>
                 <Label Text="aa" Opacity="1"/>
-                
+            
             </Grid>
             <Grid Grid.Column="1" Grid.Row="1" Style="{StaticResource Dias}">
                 <Border Style="{StaticResource DiasFrame}"/>
