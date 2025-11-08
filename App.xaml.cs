@@ -10,7 +10,7 @@ namespace CalendarioAtividadesAlusivas
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new AppShell();
         }
 
         static HelperDias _dbDias;

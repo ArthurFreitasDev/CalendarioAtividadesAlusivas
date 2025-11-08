@@ -36,7 +36,7 @@ public partial class TelaMes : ContentPage
     {
         try
         {
-            string MesAtual = new Classes.ControleMes().getTrocaTela_MesAtual();
+            string MesAtual = App.Controle_Mes.getTrocaTela_MesAtual();
             lista_dias_linha1.Clear();
             var AllDiasLinha1 = App.DBDias.GetAllDiasAsync().Result;
             foreach (Dias i in AllDiasLinha1)
@@ -96,7 +96,7 @@ public partial class TelaMes : ContentPage
                     lista_dias_linha6.Add(i);
                     ContaLinha6 = ContaLinha6 + 1;
                 }
-                if (i.Dia == 31)
+                if (i.Dia == 31 && ContaLinha6 < 7)
                 {
                     for (int j = ContaLinha6; j <= 7; j++)
                     {

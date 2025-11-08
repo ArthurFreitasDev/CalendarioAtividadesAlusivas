@@ -38,7 +38,9 @@ namespace CalendarioAtividadesAlusivas
             
             try
             {
+
                 string MesAtual = new Classes.ControleMes().getTrocaTela_MesAtual();
+                DisplayAlert(MesAtual, MesAtual, "OK");
                 lista_dias_linha1.Clear();
                 var AllDiasLinha1 = App.DBDias.GetAllDiasAsync().Result;
                 foreach(Dias i in AllDiasLinha1)

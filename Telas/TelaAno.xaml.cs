@@ -1,3 +1,4 @@
+using CalendarioAtividadesAlusivas.Models;
 using CalendarioAtividadesAlusivas.Telas;
 namespace CalendarioAtividadesAlusivas.Telas;
 
@@ -10,7 +11,8 @@ public partial class TelaAno : ContentPage
 
     private async void Ano_MesJaneiro(object sender, EventArgs e)
     {
-        App.Controle_Mes.TrocaTela_MesAtual("Janeiro");
-        await Shell.Current.GoToAsync(nameof(MainPage));
+        string mes = "Janeiro";
+        App.Controle_Mes.TrocaTela_MesAtual(mes);
+        await Navigation.PushAsync(new TelaMes());
     }
 }
