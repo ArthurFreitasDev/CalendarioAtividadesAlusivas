@@ -28,7 +28,7 @@
             <Label Text="Sabado" Grid.Row="1" Grid.Column="6" Style="{StaticResource NomeDia}"/>
 
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="2" x:Name="lst_dias_linha1_MainPage" ItemsLayout="HorizontalList"
-                        BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+                        BackgroundColor="Red" HorizontalOptions="EndAndExpand" SelectionChanged="lst_dias_MainPage_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -41,7 +41,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="3" x:Name="lst_dias_linha2_MainPage" ItemsLayout="HorizontalList"
-            BackgroundColor="Red" HorizontalOptions="CenterAndExpand">
+            BackgroundColor="Red" HorizontalOptions="CenterAndExpand" SelectionChanged="lst_dias_MainPage_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -54,7 +54,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="4" x:Name="lst_dias_linha3_MainPage" ItemsLayout="HorizontalList"
-            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+            BackgroundColor="Red" HorizontalOptions="EndAndExpand" SelectionChanged="lst_dias_MainPage_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -67,7 +67,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="5" x:Name="lst_dias_linha4_MainPage" ItemsLayout="HorizontalList"
-            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+            BackgroundColor="Red" HorizontalOptions="EndAndExpand" SelectionChanged="lst_dias_MainPage_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -80,7 +80,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="6" x:Name="lst_dias_linha5_MainPage" ItemsLayout="HorizontalList"
-            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+            BackgroundColor="Red" HorizontalOptions="EndAndExpand" SelectionChanged="lst_dias_MainPage_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">
@@ -93,7 +93,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <CollectionView HorizontalScrollBarVisibility="Never" Grid.Column="0" Grid.ColumnSpan="7"  Grid.Row="7" x:Name="lst_dias_linha6_MainPage" ItemsLayout="HorizontalList"
-            BackgroundColor="Red" HorizontalOptions="EndAndExpand">
+            BackgroundColor="Red" HorizontalOptions="EndAndExpand" SelectionChanged="lst_dias_MainPage_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Style="{StaticResource Dias}">

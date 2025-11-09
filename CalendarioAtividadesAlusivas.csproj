@@ -81,6 +81,9 @@
 	  <MauiXaml Update="Telas\TelaAno.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Telas\TelaDia.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Telas\TelaMes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

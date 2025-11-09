@@ -10,9 +10,12 @@
 
 
     <FlyoutItem Title="Início" Icon="home.png">
-        <ShellContent Title="Início" ContentTemplate="{DataTemplate Telas:TelaAno}" />
+        <ShellContent Title="Início" ContentTemplate="{DataTemplate Telas:TelaAno}"/>
     </FlyoutItem>
     <FlyoutItem Title="Mês">
-        <ShellContent Title="Mês" ContentTemplate="{DataTemplate Telas:TelaMes}" Route="MainPage"/>
+        <ShellContent Title="Mês" ContentTemplate="{DataTemplate Telas:TelaMes}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Dia">
+        <ShellContent Title="Dia" ContentTemplate="{DataTemplate Telas:TelaDia}"/>
     </FlyoutItem>
 </Shell>

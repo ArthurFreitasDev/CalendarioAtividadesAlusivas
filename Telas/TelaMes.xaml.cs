@@ -499,8 +499,14 @@ public partial class TelaMes : ContentPage
         }
     }
 
-    private void lst_dias_MainPage_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    private void lst_dias_MainPage_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
+        DisplayAlert("aaa", "aa", "a");
+        Dias Dia_Selecionado = e.CurrentSelection as Dias;
 
+        Navigation.PushAsync(new Telas.TelaDia
+        {
+            BindingContext = Dia_Selecionado
+        });
     }
 }
