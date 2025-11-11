@@ -23,7 +23,7 @@ public partial class TelaMes : ContentPage
 		InitializeComponent();
 
         AdicionarDias();
-
+        
         lst_dias_linha1_MainPage.ItemsSource = lista_dias_linha1;
         lst_dias_linha2_MainPage.ItemsSource = lista_dias_linha2;
         lst_dias_linha3_MainPage.ItemsSource = lista_dias_linha3;
@@ -122,7 +122,7 @@ public partial class TelaMes : ContentPage
             {
                 var ListaDias = new List<Dias>
                     {
-                        new Dias { Dia = 1, Mes = "Janeiro", Dia_Semana = "Quinta-Feira", DataEspecial = "Nulo", LinhaCalendario = 1 },
+                        new Dias { Dia = 1, Mes = "Janeiro", Dia_Semana = "Quinta-Feira", DataEspecial = "teste", LinhaCalendario = 1, linkVideo = "https://www.youtube.com/", Texto = "Um bolo simples fofinho e quentinho com uma xícara de café pode ser tudo o que você precisa numa tarde chuvosa. E essa aqui é a receita que pode dar isso para você. Essa receita é bem simples e não leva muitos ingredientes. A massa branca pode ser usada com recheios de diferentes sabores e irá combinar com todos, já que não tem nenhum sabor dominante mais forte. Há quem diga que a massa branca é \"sem graça\", mas se você quiser, pode incrementar o bolo com alguma cobertura de brigadeiro, beijinho, leite condensado para dar mais sabor e deixar o bolo ainda mais molhadinho. Com bastante cuidado e pré-aquecendo o forno antes de colocar ele para assar, você consegue evitar que o bolo sole. Confira como fazer essa receita de bolo simples, também conhecido como bolo de farinha de trigo. Ele cai muito bem com um café quentinho!" },
                         new Dias { Dia = 2, Mes = "Janeiro", Dia_Semana = "Sexta-Feira", DataEspecial = "Nulo", LinhaCalendario = 1 },
                         new Dias { Dia = 3, Mes = "Janeiro", Dia_Semana = "Sábado", DataEspecial = "Nulo", LinhaCalendario = 1 },
                         new Dias { Dia = 4, Mes = "Janeiro", Dia_Semana = "Domingo", DataEspecial = "Nulo", LinhaCalendario = 1 },
@@ -501,7 +501,7 @@ public partial class TelaMes : ContentPage
 
     private async void lst_dias_MainPage_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        Dias Dia_Selecionado = e.CurrentSelection as Dias;
+        var Dia_Selecionado = e.CurrentSelection.FirstOrDefault() as Dias;
         await Navigation.PushAsync(new Telas.TelaDia
         {
             BindingContext = Dia_Selecionado
