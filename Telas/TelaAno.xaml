@@ -7,15 +7,15 @@
         <ResourceDictionary>
             <Style TargetType="ImageButton" x:Key="Meses">
                 <Setter Property="Margin" Value="10"/>
-                <Setter Property="WidthRequest" Value="400"/>
+                
                 <Setter Property="HeightRequest" Value="200"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <StackLayout VerticalOptions="Center">
-        <Grid RowDefinitions="50,250,250,250" ColumnDefinitions="*,*,*,*" BackgroundColor="Red" HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Grid.Row="0" Grid.Column="0" Text="Mes" Grid.ColumnSpan="4" HorizontalOptions="Center" FontSize="30"/>
+        <Grid RowDefinitions="50,250,250,250" ColumnDefinitions="*,*,*,*" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Grid.Row="0" Grid.Column="0" Text="Calendário 2026" Grid.ColumnSpan="4" HorizontalOptions="Center" FontSize="30"/>
             <ImageButton Source="Janeiro.png" Clicked="Ano_MesJaneiro"  Grid.Row="1" Grid.Column="0" Style="{StaticResource Meses}"/>
             <ImageButton Source="fevereiro.png" Clicked="Ano_MesFevereiro" Grid.Row="1" Grid.Column="1" Style="{StaticResource Meses}"/>
             <ImageButton Source="marco.png" Clicked="Ano_MesMarco" Grid.Row="1" Grid.Column="2" Style="{StaticResource Meses}"/>

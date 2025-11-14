@@ -4,6 +4,8 @@
              x:Class="CalendarioAtividadesAlusivas.Telas.Creditos"
              Title="Créditos">
     <StackLayout>
-        
+        <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*,*">
+            
+        </Grid>
     </StackLayout>
 </ContentPage>

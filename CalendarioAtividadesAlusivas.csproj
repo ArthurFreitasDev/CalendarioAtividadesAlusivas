@@ -65,6 +65,7 @@
 	  <None Remove="Resources\Images\Janeiro.png" />
 	  <None Remove="Resources\Images\Julho.png" />
 	  <None Remove="Resources\Images\Junho.png" />
+	  <None Remove="Resources\Images\logoyoutube.png" />
 	  <None Remove="Resources\Images\Maio.png" />
 	  <None Remove="Resources\Images\marco.png" />
 	  <None Remove="Resources\Images\Novembro.png" />
@@ -95,6 +96,9 @@
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </MauiImage>
 	  <MauiImage Include="Resources\Images\junho.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Include="Resources\Images\logoyoutube.png">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </MauiImage>
 	  <MauiImage Include="Resources\Images\maio.png">

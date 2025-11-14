@@ -2,17 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalendarioAtividadesAlusivas.Telas.TelaDia"
-             Title="TelaDia"
+             Title=""
              Loaded="ContentPage_Loaded">
 
 
     <StackLayout>
         <Grid RowDefinitions="400,*" ColumnDefinitions="*,*,*">
-            <Button Clicked="Button_Clicked" Grid.Row="0" Grid.Column="1"/>
-            <Border BackgroundColor="Red" Grid.Column="1" Grid.Row="1" Padding="30">
-                <Label Text="" x:Name="lblTextoPrincipal"/>
+            <ImageButton Source="logoyoutube.png" Clicked="Button_Clicked" Grid.Row="0" Grid.Column="1"/>
+            <Border BackgroundColor="Gray" Grid.Column="1" Grid.Row="1" Padding="30">
+                <Label Text="" x:Name="lblTextoPrincipal" FontSize="30" HorizontalTextAlignment="Justify"/>
             </Border>
-            
         </Grid>
     </StackLayout>
 </ContentPage>

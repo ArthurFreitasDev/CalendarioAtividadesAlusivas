@@ -7,20 +7,58 @@ public partial class TelaDia : ContentPage
     {
         InitializeComponent();
     }
-
-    
     
     private void ContentPage_Loaded(object sender, EventArgs e)
     {
-        var dataEspecia_ = BindingContext as Dias;
-        var dia_ = App.DBDias.GetAllDiasAsync().Result.Where(d => d.DataEspecial == dataEspecia_.DataEspecial).FirstOrDefault();
-        lblTextoPrincipal.Text = dia_.Texto;
+        try
+        {
+            string data_especial_texto = "";
+            var dataEspecia_ = BindingContext as Dias;
+            var dia_ = App.DBDias.GetAllDiasAsync().Result;
+            foreach (var i in dia_)
+            {
+                if(dataEspecia_ != null)
+                {
+                    if (i.DataEspecial == dataEspecia_.DataEspecial)
+                    {
+                        data_especial_texto = i.Texto;
+                        break;
+                    }
+                }
+                
+            }
+            lblTextoPrincipal.Text = data_especial_texto;
+        }
+        catch
+        {
+            DisplayAlert("Aviso!", "Esse dia nao possui nenhuma data especial", "OK");
+        }
     }
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        var dataEspecia_ = BindingContext as Dias;
-        var dia_ = App.DBDias.GetAllDiasAsync().Result.Where(d => d.DataEspecial == dataEspecia_.DataEspecial).FirstOrDefault();
-        await Launcher.OpenAsync(dia_.linkVideo);
+        try
+        {
+            string data_especial_texto = "";
+            var dataEspecia_ = BindingContext as Dias;
+            var dia_ = App.DBDias.GetAllDiasAsync().Result;
+            foreach (var i in dia_)
+            {
+                if (dataEspecia_ != null)
+                {
+                    if (i.DataEspecial == dataEspecia_.DataEspecial)
+                    {
+                        data_especial_texto = i.Texto;
+                        break;
+                    }
+                }
+
+            }
+            await Launcher.OpenAsync(data_especial_texto);
+        }
+        catch
+        {
+            DisplayAlert("Aviso!", "Esse dia nao possui nenhuma data especial", "OK");
+        }
     }
 }
