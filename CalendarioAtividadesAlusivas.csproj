@@ -60,9 +60,12 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\Abril.png" />
 	  <None Remove="Resources\Images\Agosto.png" />
+	  <None Remove="Resources\Images\arthur.jpeg" />
 	  <None Remove="Resources\Images\Dezembro.png" />
+	  <None Remove="Resources\Images\edu.jpeg" />
 	  <None Remove="Resources\Images\Fevereiro.png" />
 	  <None Remove="Resources\Images\Janeiro.png" />
+	  <None Remove="Resources\Images\joao.jpeg" />
 	  <None Remove="Resources\Images\Julho.png" />
 	  <None Remove="Resources\Images\Junho.png" />
 	  <None Remove="Resources\Images\logoyoutube.png" />
@@ -71,6 +74,12 @@
 	  <None Remove="Resources\Images\Novembro.png" />
 	  <None Remove="Resources\Images\Outubro.png" />
 	  <None Remove="Resources\Images\Setembro.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\arthur.jpeg">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -86,10 +95,16 @@
 	  <MauiImage Include="Resources\Images\dezembro.png">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </MauiImage>
+	  <MauiImage Include="Resources\Images\edu.jpeg">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
 	  <MauiImage Include="Resources\Images\fevereiro.png">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </MauiImage>
 	  <MauiImage Include="Resources\Images\janeiro.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </MauiImage>
+	  <MauiImage Include="Resources\Images\joao.jpeg">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </MauiImage>
 	  <MauiImage Include="Resources\Images\julho.png">
