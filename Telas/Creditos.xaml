@@ -3,14 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalendarioAtividadesAlusivas.Telas.Creditos"
              Title="Créditos">
-    <StackLayout VerticalOptions="Center" Margin="10,10,10,200">
-        <Grid RowDefinitions="*,100" ColumnDefinitions="*,*,*,*,*">
-            <Image Source="joao.jpeg" Grid.Row="0" Grid.Column="1" HeightRequest="200" WidthRequest="500" />
-            <Image Source="arthur.jpeg" Grid.Row="0" Grid.Column="2" HeightRequest="200" WidthRequest="500"/>
-            <Image Source="edu.jpeg" Grid.Row="0" Grid.Column="3" HeightRequest="200" WidthRequest="500"/>
-            <Label Text="João Gabriel Pereira de Oliveira" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" FontSize="20" VerticalTextAlignment="Center"/>
-            <Label Text="Arthur Cesar de Freitas" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" FontSize="20" VerticalTextAlignment="Center"/>
-            <Label Text="Eduardo Piclo Crepaldi" Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center" FontSize="20" VerticalTextAlignment="Center"/>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout HorizontalOptions="Center">
+        <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="*">
+            <Image Source="imgunisagrado.png" Grid.Column="0" Grid.Row="0" WidthRequest="500"/>
+            <Label Text="Nome da disciplina: Desenvolvimento de Softwere" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="Nome do professor responsável: Prof. Dr. Elvio Gilberto da Silva" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="Nome completo dos integrantes e colaboradores do grupo:" Grid.Column="0" Grid.Row="3"/>
+            <Label Text="Arthur Cesar de Freitas" Grid.Column="0" Grid.Row="4"/>
+            <Label Text="Eduardo Piclo Crepaldi" Grid.Column="0" Grid.Row="5"/>
+            <Label Text="João Gabriel Pereira de Oliveira" Grid.Column="0" Grid.Row="6"/>
+            <Label Text="Desenvolvimento:" Grid.Column="0" Grid.Row="7"/>
+            <Image Source="imgcc.png" Grid.Column="0" Grid.Row="8" WidthRequest="200"/>
+            <Label Text="Apoio:" Grid.Column="0" Grid.Row="9"/>
+            <Image Source="imgce.png" Grid.Column="0" Grid.Row="10" WidthRequest="200"/>
         </Grid>
     </StackLayout>
 </ContentPage>
