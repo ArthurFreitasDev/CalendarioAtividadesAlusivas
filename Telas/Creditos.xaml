@@ -8,9 +8,9 @@
             <Image Source="joao.jpeg" Grid.Row="0" Grid.Column="1" HeightRequest="200" WidthRequest="500" />
             <Image Source="arthur.jpeg" Grid.Row="0" Grid.Column="2" HeightRequest="200" WidthRequest="500"/>
             <Image Source="edu.jpeg" Grid.Row="0" Grid.Column="3" HeightRequest="200" WidthRequest="500"/>
-            <Label Grid.Row="1" Grid.Column="1"/>
+            <Label Text="João Gabriel Pereira de Oliveira" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" FontSize="20" VerticalTextAlignment="Center"/>
             <Label Text="Arthur Cesar de Freitas" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" FontSize="20" VerticalTextAlignment="Center"/>
-            <Label Grid.Row="1" Grid.Column="3"/>
+            <Label Text="Eduardo Piclo Crepaldi" Grid.Row="1" Grid.Column="3" HorizontalTextAlignment="Center" FontSize="20" VerticalTextAlignment="Center"/>
         </Grid>
     </StackLayout>
 </ContentPage>

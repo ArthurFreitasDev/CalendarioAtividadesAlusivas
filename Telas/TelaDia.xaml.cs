@@ -39,7 +39,7 @@ public partial class TelaDia : ContentPage
     {
         try
         {
-            string data_especial_texto = "";
+            string data_especial_link = "";
             var dataEspecia_ = BindingContext as Dias;
             var dia_ = App.DBDias.GetAllDiasAsync().Result;
             foreach (var i in dia_)
@@ -48,13 +48,13 @@ public partial class TelaDia : ContentPage
                 {
                     if (i.DataEspecial == dataEspecia_.DataEspecial)
                     {
-                        data_especial_texto = i.Texto;
+                        data_especial_link = i.linkVideo;
                         break;
                     }
                 }
 
             }
-            await Launcher.OpenAsync(data_especial_texto);
+            await Launcher.OpenAsync(data_especial_link);
         }
         catch
         {
