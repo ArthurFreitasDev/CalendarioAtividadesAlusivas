@@ -15,7 +15,7 @@
     </ContentPage.Resources>
 
     <StackLayout HorizontalOptions="Center">
-        <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="*">
+        <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="*">
             <Image Source="imgunisagrado.png" Grid.Column="0" Grid.Row="0" WidthRequest="500"/>
             <Label Text="Nome da disciplina: Desenvolvimento de Softwere" Grid.Column="0" Grid.Row="1"/>
             <Label Text="Nome do professor responsável: Prof. Dr. Elvio Gilberto da Silva" Grid.Column="0" Grid.Row="2"/>
@@ -27,6 +27,7 @@
             <Image Source="imgcc.png" Grid.Column="0" Grid.Row="8" WidthRequest="200"/>
             <Label Text="Apoio:" Grid.Column="0" Grid.Row="9"/>
             <Image Source="imgce.png" Grid.Column="0" Grid.Row="10" WidthRequest="200"/>
+            <Label Text="Versão 1.0.0" Grid.Column="0" Grid.Row="11" Margin="0,70,0,0" FontSize="15"/>
         </Grid>
     </StackLayout>
 </ContentPage>
