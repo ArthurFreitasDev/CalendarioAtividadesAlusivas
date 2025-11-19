@@ -48,7 +48,7 @@ public partial class TelaAno : ContentPage
     }
     private async void Ano_MesJulho(object sender, EventArgs e)
     {
-        string mes = "Junho";
+        string mes = "Julho";
         App.Controle_Mes.TrocaTela_MesAtual(mes);
         await Navigation.PushAsync(new TelaMes());
     }
